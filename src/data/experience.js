@@ -1,37 +1,38 @@
+function calculateTimeDifference(fromDate) {
+  const currentDate = new Date();
+  const startDate = new Date(fromDate);
+
+  let years = currentDate.getFullYear() - startDate.getFullYear();
+  let months = currentDate.getMonth() - startDate.getMonth();
+  let days = currentDate.getDate() - startDate.getDate();
+
+  if (days < 0) {
+    months--;
+    days += new Date(
+      currentDate.getFullYear(),
+      currentDate.getMonth(),
+      0
+    ).getDate();
+  }
+
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+  return `${years} years, ${months} months, and ${days} days`;
+}
+
 export const content = [
   {
-    title: "Software Engineer",
-    company: "Persistent Systems",
-    timeline: "2022 July - 2024 July",
-    description:
-      "Being an SDE, I was glad enough to got a chance working on diversified domains and team. Collaborated with clients presented me ample opportunities to showcase my skills in different domains and to be a part of one of the Biggest Teams",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--indigo-500),var(--lime-300))] flex items-center justify-center text-white">
-        SDE, Persistent Systems
-      </div>
-    ),
-  },
-  {
-    title: "SDE Intern",
-    company: "Persistent Systems",
-    timeline: "2022 Jan - 2022 July",
-    description:
-      "Got a chance to work and get trained on the Full Stack Technologies, where I was collaborated with Team and completed the assignments and moved to a position where these skills can be applied practically",
-    content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-        SDE Intern, Persistent Systems
-      </div>
-    ),
-  },
-  {
-    title: "SE Intern",
-    company: "Virtusa",
-    timeline: "2021 Dec - 2022 Jan",
-    description:
-      "Delve myself into a Java Full Stack Training where I got a chance to worked with the team and present my skills",
+    title: "Senior Full Stack Engineer",
+    company: "Badho",
+    timeline: "2022 July - Present",
+    description: `Senior Software Engineer at Badho with ${calculateTimeDifference(
+      "2022-07-01"
+    )} years of experience of developing high-quality, scalable, and user-friendly applications. Expertise in React Native, ReactJS, NodeJS, Hasura, and AWS services like Lambda and S3. Proven track record of delivering successful projects by utilising Agile development methodologies. Skilled in developing front-end and back-end components, API Integration and troubleshooting complex issues. Experienced in working in cross-functional teams and promoting collaboration.`,
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        SE Intern, Virtusa
+        Senior Full Stack Engineer | Badho
       </div>
     ),
   },

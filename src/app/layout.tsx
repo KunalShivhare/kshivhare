@@ -5,11 +5,11 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Rishabh Parsediya",
-  description: "Software Engineer | Developer",
-  icons:{
-    icon:"/icon.png"
-  }
+  title: "Kunal Shivhare",
+  description: "Senior Full Stack Developer | Mobile Engineer",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
