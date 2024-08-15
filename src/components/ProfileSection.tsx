@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { SparklesPreview } from "./SparklesPreview";
 import Image from "next/image";
-import boxArray from "../data/planets.json";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
